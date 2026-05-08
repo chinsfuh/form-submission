@@ -219,7 +219,7 @@
       letter-spacing: 1.5px;
     }
 
-    .error-msg { font-size: 12px; color: #e06060; display: none; }
+    .error-msg { font-size: 14px; color: #e06060; display: none; margin-top: 4px; letter-spacing: 0.5px; }
 
     @media (max-width: 480px) { .names { font-size: 30px; } }
   </style>
@@ -330,7 +330,9 @@
       e.preventDefault();
 
       if (!attendYes.checked && !attendNo.checked) {
-        document.getElementById('err-attend').style.display = 'block';
+        const errEl = document.getElementById('err-attend');
+        errEl.style.display = 'block';
+        errEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
 
@@ -346,9 +348,12 @@
           headers: { 'Accept': 'application/json' }
         });
 
-        if (!response.ok) throw new Error('Submission failed');
+        const result = await response.json();
+        if (!response.ok || result.success === 'false' || result.success === false) {
+          throw new Error(result.message || 'Submission failed');
+        }
       } catch (err) {
-        alert('Something went wrong. Please try again or contact us directly.');
+        alert('Something went wrong: ' + err.message + '\n\nPlease try again or contact us directly.');
         btn.textContent = 'Send RSVP';
         btn.disabled = false;
         return;
