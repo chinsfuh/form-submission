@@ -29,7 +29,7 @@
     }
 
     .rsvp-label {
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 4px;
       text-transform: uppercase;
       color: #c9973a;
@@ -50,28 +50,28 @@
 
     .names {
       font-family: 'Playfair Display', serif;
-      font-size: 38px;
+      font-size: 44px;
       font-weight: 400;
       color: #f0d882;
-      line-height: 1.1;
+      line-height: 1.15;
     }
 
     .amp { color: #c9973a; font-style: italic; margin: 0 8px; }
 
     .surnames {
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #c9973a88;
-      margin-top: 6px;
+      color: #c9973a99;
+      margin-top: 8px;
     }
 
     .event-info {
-      margin-top: 16px;
-      font-size: 14px;
+      margin-top: 18px;
+      font-size: 16px;
       color: #c9973a;
       letter-spacing: 1.5px;
-      line-height: 1.8;
+      line-height: 2;
       font-weight: 300;
     }
 
@@ -85,7 +85,7 @@
     .field { display: flex; flex-direction: column; gap: 8px; }
 
     label {
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: #c9973a;
@@ -97,8 +97,8 @@
       border-radius: 4px;
       color: #e8d5a3;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 17px;
-      padding: 11px 14px;
+      font-size: 19px;
+      padding: 13px 16px;
       width: 100%;
       outline: none;
       transition: border-color 0.2s, box-shadow 0.2s;
@@ -126,13 +126,13 @@
 
     .attend-opt label {
       display: block;
-      padding: 14px 8px;
+      padding: 16px 8px;
       border-radius: 4px;
       border: 1px solid #c9973a44;
       background: #161616;
       color: #c9973a;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: 1.5px;
       cursor: pointer;
       text-align: center;
@@ -153,7 +153,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: #c9973a66;
@@ -188,8 +188,8 @@
 
     .footer-note {
       text-align: center;
-      font-size: 12px;
-      color: #c9973a44;
+      font-size: 14px;
+      color: #c9973a66;
       margin-top: 32px;
       letter-spacing: 1px;
       padding: 0 24px;
@@ -207,21 +207,21 @@
       margin-bottom: 12px;
     }
 
-    .thankyou p { color: #c9973a; font-size: 16px; letter-spacing: 1px; line-height: 1.8; }
+    .thankyou p { color: #c9973a; font-size: 18px; letter-spacing: 1px; line-height: 1.9; }
 
     .thankyou .date-reminder {
       margin-top: 32px;
       padding: 20px;
       border: 1px solid #c9973a33;
       border-radius: 4px;
-      font-size: 13px;
+      font-size: 15px;
       color: #c9973a66;
       letter-spacing: 1.5px;
     }
 
     .error-msg { font-size: 14px; color: #e06060; display: none; margin-top: 4px; letter-spacing: 0.5px; }
 
-    @media (max-width: 480px) { .names { font-size: 30px; } }
+    @media (max-width: 480px) { .names { font-size: 34px; } }
   </style>
 </head>
 <body>
@@ -283,14 +283,6 @@
             <option value="6">6 guests</option>
             <option value="7">7 guests</option>
             <option value="8">8 guests</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="dietary">Meal Preference</label>
-          <select id="dietary" name="Meal Preference">
-            <option value="Halal">Halal</option>
-            <option value="Sinalau Bakas Hatiku">Sinalau Bakas Hatiku</option>
           </select>
         </div>
 
